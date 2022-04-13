@@ -3,6 +3,7 @@
   Teal - #147F7E
   Cerulean Crayola - #37ABD5
   Carmine MP - #D52246
+  - #f2f2ea
 */
 
 .bg-blue {
@@ -11,4 +12,8 @@
 
 .bg-teal {
   background-color: #147F7E;
+}
+
+.bg-secondary {
+  background-color: #f2f2ea;
 }

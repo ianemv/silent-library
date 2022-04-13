@@ -3,11 +3,14 @@
 @import url('./margins.css');
 @import url('./paddings.css');
 @import url('./fonts.css');
+@import url('./colors.css');
 header {
 	background-color: #D52246;
 	padding: 5px 20px;
 	display: flex;
 	justify-content: space-between;
+  position: fixed;
+  width: 100%;
 }
 
 nav {
