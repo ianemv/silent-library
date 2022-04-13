@@ -1,0 +1,17 @@
+*, body, html {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+}
+
+
+
+/* ------------ 
+  Rounded
+*/
+
+.rounded-10 {
+  border-radius: 10px;
+}
+

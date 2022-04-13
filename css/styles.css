@@ -1,0 +1,43 @@
+@import url('./base.css');
+@import url('./layouts.css');
+@import url('./margins.css');
+@import url('./paddings.css');
+@import url('./fonts.css');
+header {
+	background-color: #D52246;
+	padding: 5px 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {
+	display: flex;
+	justify-content: center;	
+	color: #fff;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+nav ul {
+	list-style: none;
+  padding: 10px 0;
+}
+
+nav li {
+	display: inline;
+  padding: 10px;
+}
+
+nav a, nav a:visited {
+	color: white;
+	text-decoration: none;
+}
+nav a:hover {
+	text-decoration: underline;
+}
+
+nav button {
+ background-color: #37ABD5; 
+ padding: 10px 15px;
+ color: #fff;
+ border-radius: 5px;
+}
