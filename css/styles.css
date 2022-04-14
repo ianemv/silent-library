@@ -4,6 +4,12 @@
 @import url('./paddings.css');
 @import url('./fonts.css');
 @import url('./colors.css');
+
+body, main {
+  height: 100vh;
+  position: relative;
+}
+
 header {
 	background-color: #D52246;
 	padding: 0;
@@ -51,7 +57,10 @@ nav button {
 }
 
 footer {
-
+/*   position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; */
 }
 
 footer ul {

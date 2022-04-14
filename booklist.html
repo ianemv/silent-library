@@ -8,37 +8,75 @@
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-	<header>
-		<h1>Silent Library
-		</h1>	
-		<nav>
-			<ul>
-				<li>
-					<a href="/library/">Home</a>	
-				</li>
-				<li>
-					<a href="/library/booklist.html">
-						Booklist
-					</a>
-				</li>
-				<li>
-					Events
-				</li>				
-			</ul>
-      <button> Login/Register</button>
-		</nav>
+	<header class="">
+    <section class="">
+      <div class="flex space-between">
+        <a href="/">
+          <h1>
+            <img src="./images/header_logo.png" alt="" width="250">
+          </h1>	
+        </a>
+        <nav class="flex ">
+          <ul class="mr-20">
+          <li>
+            <a href="/">Home</a>	
+          </li>
+          <li>
+            <a href="/booklist.html">
+              Books
+            </a>
+          </li>
+          <li>
+            
+            <a href="/events.html">
+              Events
+            </a>
+          </li>
+          <li class="px-20"> 
+            <button>Login/Register</button>
+          </li>
+        </ul>
+      </nav>
+
+      </div>
+  </section>
 	</header>
-	<h2> Booklist
-	</h2>
-	<div>
-		<div>
-			<ißmg src="https://thumbs.dreamstime.com/b/open-book-19523116.jpg" alt="">
 
-		</div>
-
-		<div>
-			Book Title
-		</div>
-	</div>
+  <main>
+    <section class="bg-secondary">
+      <div class="content-wrap">
+        <div>
+          <h2> Booklist
+          </h2>
+          <div>
+            <ißmg src="https://thumbs.dreamstime.com/b/open-book-19523116.jpg" alt="">
+      
+          </div>
+      
+          <div>
+            Book Title
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
+  <footer class="bg-red text-white">
+    <section class="content-wrap py-1">
+      <div class="flex space-between">
+          <div>
+            <img src="./images/header_logo.png" alt="" width="150">
+            <p>
+              Silent Library offers 
+            </p>
+          </div> 
+          <div class="grid grid-cols-2">
+            <ul>
+              <li>Sitemap</li>
+              <li>Contact</li>
+            </ul>
+          </div> 
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
