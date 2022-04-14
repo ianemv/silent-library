@@ -15,9 +15,11 @@
 	<header class="">
     <section class="">
       <div class="flex space-between">
-        <h1>
-          <img src="./images/header_logo.png" alt="" width="250">
-        </h1>	
+        <a href="/">
+          <h1>
+            <img src="./images/header_logo.png" alt="" width="250">
+          </h1>	
+        </a>
         <nav class="flex ">
           <ul class="mr-20">
           <li>
@@ -46,20 +48,30 @@
   <main>
     <section class="bg-secondary">
       <div class="content-wrap">
-        <h1 class="text-black text-center">Welcome to Silent Library</h1>        
-        <div class="flex space-between">
-            <div class="flex space-between">
-            </div>
-            <div>
+        
+        <div id="event-section" class="flex space-between px-3 flex-wrap">
+            <div id="event-item" class="p-3 bg-gray text-white rounded-10 flex flex-column space-between">
+              <div class="">
+                <h2>Holy Week Special Promo</h2>
+                <p>Holy Week special! In celebration of holy week, Silent Library
+                  offers 10% discount to books about religion.
+                 </p>
+               </div>
+               <div>
+                 <a href="" class="font-3 btn circle text-white no-ul">></a>
+               </div>
 
+            </div>
+            <div class="text-center">
+              <img src="./images/events/holy-week.png" alt="">
             </div>
         </div>
       </div>
     </section>
     <section class="bg-blue">
       <div class="content-wrap">
-        <h2 class="text-black text-center">New & Popular Books</h2>        
-        <div class="grid grid-cols-4 p-3 text-white">
+        <h2 class="text-center text-white">New & Popular Books</h2>        
+        <div class="grid grid-cols-4 p-3 text-white text-center">
             <div>
                 <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
                 <p>To Kill a Mockingbird</p>
@@ -76,11 +88,37 @@
                 <p>Harper Lee</p>
             </div>    
             <div>
-                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+                <img class="book-cover" src="./images/books/the_midnight_library.jpg" alt="" width="150">
+                <p>The Midnight Library</p>
+                <p>Matt Haig</p>
+            </div>    
+        </div>
+      </div>
+    </section>
+    <section class="bg-light-gray">
+      <div class="content-wrap">
+        <h2 class="text-center text-black">Events & Promotions</h2>        
+        <div class="grid grid-cols-4 p-3 text-black text-center">
+            <div>
+                <img class="event-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+                <p>Book Launching</p>
+                <p>May 22, 2022</p>
+            </div>    
+            <div>
+                <img class="event-cover" src="./images/events/book-signing.jpg" alt="" >
+                <p>Book Signing by J.D. Salinger</p>
+                <p>June 30, 2022</p>
+            </div>    
+            <div>
+                <img class="event-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
                 <p>To Kill a Mockingbird</p>
                 <p>Harper Lee</p>
             </div>    
- 
+            <div>
+                <img class="event-cover" src="./images/books/the_midnight_library.jpg" alt="" width="150">
+                <p>The Midnight Library</p>
+                <p>Matt Haig</p>
+            </div>    
         </div>
       </div>
     </section>

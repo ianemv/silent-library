@@ -4,6 +4,9 @@
   Cerulean Crayola - #37ABD5
   Carmine MP - #D52246
   - #f2f2ea
+  Gray - #333
+  light gray - #dfdfdf
+  light red / pink #ff4066
 */
 
 .bg-blue {
@@ -17,8 +20,16 @@
   background-color: #147F7E;
 }
 
+.bg-light-gray {
+  background-color: #dfdfdf;
+}
+
 .bg-secondary {
   background-color: #f2f2ea;
+}
+
+.bg-gray {
+  background-color: #333333;
 }
 
 .text-white {
@@ -28,3 +39,13 @@
 .text-black {
   color: black;
 }
+
+.border-solid-1 {
+  border: 1px solid;
+}
+
+.hover-border-tertiary:hover {
+  border-color: #147F7E;
+  border: 1px solid;
+}
+

@@ -19,3 +19,11 @@ h1 {
 .text-center {
   text-align: center;
 }
+
+.font-3 {
+  font-size: 3em;
+}
+
+.no-ul {
+  text-decoration: none;
+}
