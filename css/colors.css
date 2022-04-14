@@ -7,7 +7,10 @@
 */
 
 .bg-blue {
-  background-color: #0e7C7B;
+  background-color: #37ABD5;
+}
+.bg-red {
+  background-color: #D52246;
 }
 
 .bg-teal {
@@ -16,4 +19,12 @@
 
 .bg-secondary {
   background-color: #f2f2ea;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: black;
 }
