@@ -28,19 +28,29 @@
 
 .grid {
   display: grid;
+  grid-auto-flow: row;
 }
 
 .grid-cols-2 {  
   grid-template-columns: 1fr 1fr;
 }
 
+.grid-sidebar {  
+  grid-template-columns: 1fr 3fr;
+}
+
 .gap-20 {
   gap:20px;
 }
 
-@media screen and (min-width:750px){
+.grid-cols-4 {  
+  grid-template-columns: repeat(4, 1fr)
+}
+
+@media screen and (min-width:500px) and (max-width:1000px)
+{
   .grid-cols-4 {  
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 

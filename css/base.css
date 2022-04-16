@@ -1,10 +1,25 @@
+:root {
+  --light-gray: #dfdfdf;
+  --blue: #37ABD5;
+  --teal: #0e7C7B;
+  --red: #0e7C7B;
+  --white: #ffffff;
+  --gray: #333;
+  --light-yelow: #f2f2ea;
+}
+
+
+
 *, body, html {
   padding: 0;
   margin: 0;
   line-height: 1.5;
   box-sizing: border-box;
 }
+body, html{
+  background-color: var(--light-yellow, #fff);
 
+}
 
 
 /* ------------ 
@@ -18,3 +33,17 @@
 .circle {
   border-radius: 50%;
 }
+
+.btn {
+  border-radius: 5px;
+  border: none;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-white-1px {
+  border: solid white 1px;
+}
+
