@@ -1,4 +1,9 @@
-
+.m-1 {
+  margin: 1em;
+}
+.m-2 {
+  margin: 2em;
+}
 .mr-10 {
   margin-right: 10px;
 }
@@ -26,4 +31,14 @@
 .my-20 {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-2 {
+  margin-top: 2em;
 }

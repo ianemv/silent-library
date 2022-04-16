@@ -4,37 +4,110 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Silent Library</title>
+	<title>Silent Library : Booklist</title>
 	<link rel="stylesheet" href="./css/styles.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Source+Sans+Pro:wght@200;300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
-		<h1>Silent Library</h1>	
-		<nav class="flex ">
-			<ul class="mr-20">
-				<li>
-					<a href="/library/">Home</a>	
-				</li>
-				<li>
-					<a href="/library/booklist.html">
-						Books
-					</a>
-				</li>
-				<li>
-					
-          <a href="/library/events.html">
-						Events
-					</a>
-				</li>
-        <li class="px-20"> 
-          <button>Login/Register</button>
-        </li>
-			</ul>
-		</nav>
+	<header class="">
+    <section class="">
+      <div class="flex space-between">
+          <h1>
+              <a href="/">
+              <img src="./images/header_logo.png" alt="" width="250">
+              </a>
+          </h1>	
+          <nav class="flex py-10">
+            <ul class="mr-20">
+            <li>
+              <a href="/">Home</a>	
+            </li>
+            <li>
+              <a href="/booklist.html">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="/events.html">
+                Events
+              </a>
+            </li>
+            <li class=" btn text-white bg-blue"> 
+              <a href="./login.html" class="btn text-white bg-blue mt-10">Login/Register</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 	</header>
+
+  <main>
+    <section class="bg-secondary">
+      <div class="content-wrap">
+      <div class=" py-2 rounded-10 px-5 center">
+            
+          <div class="flex mb-20 py-1 gap-20 ">
+            <div class="px-3 pt-4">
+              </div>
+            <div class="px-3 pt-4">
+              <img src="./images/login-register.png" alt="" class="mt-2">
+            </div>
+            <div class="content p-5">
+              <h3>
+                Login now!
+              </h3>
+              
+              <form action="" class="form">
+                <div>
+                  <label for="name">Email
+                    <input type="text" name="name">
+
+                  </label>
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input type="password" name="password">
+                </div>
+                
+                <button class="btn px-20 py-1 bg-blue text-white">Login </button>
+              </form>
+              <a href="./register.html" class="py-20 mt-10">Don't have an account yet</a>
+            </div>
+          </div>
+       
+      </div>
+    
+      
+  </section>
+  </main>
+  <footer class="bg-red text-white">
+    <section class="content-wrap py-1">
+      <div class="flex space-between">
+          <div>
+            <img src="./images/header_logo.png" alt="" width="150">
+            <p>
+              Silent Library offers 
+            </p>
+          </div> 
+          <div id="footer-links" class="grid grid-cols-2 gap-20">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li><a href="./contact-us.html">Contact Us</a>
+
+              </li>
+              <li><a href="./events.html">Events & Promotions</a>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="./sitemap.html">Sitemap</a></li>
+              <li><a href="./privacy.html">Privacy</a></li>
+            </ul>
+          </div> 
+      </div>
+    </section>
+  </footer>
 </body>
 </html>

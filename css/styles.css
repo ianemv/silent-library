@@ -24,6 +24,13 @@ header section {
   width: 85%;
 }
 
+header .btn a {
+  text-decoration: none;
+}
+header .btn a:hover {
+  text-decoration: none;
+}
+
 nav {
 	display: flex;
 	justify-content: center;	
