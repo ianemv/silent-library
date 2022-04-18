@@ -81,6 +81,11 @@ footer ul {
   max-width: 80%;
 }
 
+#events-promotion {
+ /*  grid-template-columns: repeat(auto-fill, minmax(186px, 1fr));
+ */
+}
+
 @media screen and (min-width:250px) and (max-width: 1000px){
   #event-section img {
     margin-top: 30px;
