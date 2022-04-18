@@ -1,10 +1,39 @@
+.p-1 {
+  padding: 1em;
+}
+.p-2 {
+  padding: 2em;
+}
+.p-3 {
+  padding: 3em;
+}
 .px-10 {
   padding-right: 10px;
   padding-left: 10px;
 }
+.p-10 {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.p-20 {
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
 .px-20 {
   padding-left: 20px;
   padding-right: 20px;
+}
+.py-10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.py-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .py-1 {
   padding-top: 1em;
@@ -14,6 +43,16 @@
   padding-left: 3em;
   padding-right: 3em;
 }
+.px-5 {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+.p-2 {
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 .p-3 {
   padding-left: 3em;
   padding-right: 3em;
@@ -22,7 +61,7 @@
 }
 .p-5 {
   padding-left: 5em;
-  padding-right: 6em;
+  padding-right: 5em;
   padding-top: 5em;
   padding-bottom: 5em;
 }
@@ -31,3 +70,20 @@
   padding-top: 3em;
   padding-bottom: 3em;
 }
+.pt-4 {
+  padding-top: 4em;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+@media screen and (min-width:250px) and (max-width: 750px){
+  .p-m-5 {
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+}
+

@@ -1,8 +1,44 @@
-
+.m-1 {
+  margin: 1em;
+}
+.m-2 {
+  margin: 2em;
+}
 .mr-10 {
   margin-right: 10px;
 }
 
 .mr-20 {
   margin-right: 20px;
+}
+
+.my-2 {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.mr-1 {
+  margin-right: 1em;
+}
+.mr-2 {
+  margin-right: 2em;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.my-20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mt-2 {
+  margin-top: 2em;
 }

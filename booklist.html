@@ -5,40 +5,163 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Silent Library : Booklist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-	<header>
-		<h1>Silent Library
-		</h1>	
-		<nav>
-			<ul>
-				<li>
-					<a href="/library/">Home</a>	
-				</li>
-				<li>
-					<a href="/library/booklist.html">
-						Booklist
-					</a>
-				</li>
-				<li>
-					Events
-				</li>				
-			</ul>
-      <button> Login/Register</button>
-		</nav>
+	<header class="">
+    <section class="">
+      <div class="flex space-between">
+          <h1>
+              <a href="/">
+              <img src="./images/header_logo.png" alt="" width="250">
+              </a>
+          </h1>	
+          <nav class="flex py-10">
+            <ul class="mr-20">
+            <li>
+              <a href="/">Home</a>	
+            </li>
+            <li>
+              <a href="/booklist.html">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="/events.html">
+                Events
+              </a>
+            </li>
+            <li class=" btn text-white bg-blue"> 
+              <a href="./login.html" class="btn text-white bg-blue mt-10">Login/Register</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
 	</header>
-	<h2> Booklist
-	</h2>
-	<div>
-		<div>
-			<ißmg src="https://thumbs.dreamstime.com/b/open-book-19523116.jpg" alt="">
 
-		</div>
+  <main>
+    <section class="bg-secondary">
+      <div class="content-wrap">
+        <h1 class="text-black my-20">Books</h1>
+        <div class="grid grid-sidebar gap-20 ">
+          <div class="bg-light-gray p-2 rounded-10">
+            <form class="my-2">
+              <input type="text" class="rounded-10 p-10 border-white-1px">
+              <button class="btn bg-blue text-white p-10 px-20">Go</button>
+            </form>
+            <h3>Find by Genre</h3>
+            <ul id="genre-list">
+              <li>Fiction</li>
+              <li>Politics</li>
+              <li>Religion</li>
+              <li>Novel</li>
+              <li>Non-Fiction</li>
+              <li>Non-Children's Literature</li>
+              <li>Mystery</li>
+            </ul>
+          </div>
+          <div class="bg-light-gray p-2 rounded-10">
+            <div class="flex border-bottom-dashed-washed mb-20 py-1">
+              <div class="mr-2">
+                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+        
+              </div>
+              <div>
+                <h4>
+                  To Kill a Mockingbird
+                </h4>   
+                <p>Author: Harper Lee</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+            </div>
+            <div class="flex border-bottom-dashed-washed mb-20 py-1">
+              <div class="mr-2">
+                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+        
+              </div>
+              <div>
+                <h4>
+                  To Kill a Mockingbird
+                </h4>   
+                <p>Author: Harper Lee</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+            </div>
+            <div class="flex border-bottom-dashed-washed mb-20 py-1">
+              <div class="mr-2">
+                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+        
+              </div>
+              <div>
+                <h4>
+                  To Kill a Mockingbird
+                </h4>   
+                <p>Author: Harper Lee</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+            </div>
+            <div class="flex border-bottom-dashed-washed mb-20 py-1">
+              <div class="mr-2">
+                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+        
+              </div>
+              <div>
+                <h4>
+                  To Kill a Mockingbird
+                </h4>   
+                <p>Author: Harper Lee</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+            </div>
+            <div class="flex border-bottom-dashed-washed mb-20 py-1">
+              <div class="mr-2">
+                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
+        
+              </div>
+              <div>
+                <h4>
+                  To Kill a Mockingbird
+                </h4>   
+                <p>Author: Harper Lee</p>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
+  <footer class="bg-red text-white">
+    <section class="content-wrap py-1">
+      <div class="flex space-between">
+          <div>
+            <img src="./images/header_logo.png" alt="" width="150">
+            <p>
+              Silent Library offers 
+            </p>
+          </div> 
+          <div id="footer-links" class="grid grid-cols-2 gap-20">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li><a href="./contact-us.html">Contact Us</a>
 
-		<div>
-			Book Title
-		</div>
-	</div>
+              </li>
+              <li><a href="./events.html">Events & Promotions</a>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="./sitemap.html">Sitemap</a></li>
+              <li><a href="./privacy.html">Privacy</a></li>
+            </ul>
+          </div> 
+      </div>
+    </section>
+  </footer>
 </body>
 </html>
