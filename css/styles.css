@@ -179,7 +179,16 @@ table td{
   padding: 5px 0;
 }
 
+.sitemap ul {
+  list-style-type: none;
+}
+.sitemap li {
+  padding: 10px;
+}
 
+.sitemap a {
+  text-decoration: none;
+}
 
 @media screen and (min-width:250px) and (max-width: 1000px){
   #event-section img {
