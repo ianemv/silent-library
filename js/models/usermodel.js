@@ -13,8 +13,14 @@ class UserModel extends Model {
     return this._instance;
     
   }
+
+
 }
 
 UserModel._instance = null;
 
 export default UserModel;
+
+MVC
+
+Model - View - Controller 
