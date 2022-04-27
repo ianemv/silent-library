@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Silent Library : Booklist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/pages/bookadmin.js" type="module"></script>
+</head>
+<body>
+	<header class="">
+    <section class="">
+      <div class="flex space-between">
+          <h1>
+              <a href="/">
+              <img src="./images/header_logo.png" alt="" width="250">
+              </a>
+          </h1>	
+          <nav class="flex py-10">
+            <ul class="mr-20">
+            <li>
+              <a href="/">Home</a>	
+            </li>
+            <li>
+              <a href="/booklist.html">
+                Books
+              </a>
+            </li>
+            <li>
+              <a href="/borrowers.html">
+                Borrowers
+              </a>
+            </li>
+            <li>
+              <a href="/events.html">
+                Events
+              </a>
+            </li>
+            <li class=" btn text-white bg-blue"> 
+              <a href="./login.html" class="btn text-white bg-blue mt-10">Login/Register</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+	</header>
+
+  <main>
+    <section class="bg-secondary">
+      <div class="content-wrap">
+        <h1 class="text-black my-20">Admin Page</h1>
+        <div class="grid grid-sidebar gap-20 ">
+          <div class="bg-light-gray p-2 rounded-10">
+           
+            <h3>Menu</h3>
+            <ul id="genre-list">
+              <li>Books</li>
+              <li>Borrowers</li>
+              <li>Events</li>
+              <li>Enquiries</li>
+              <li>Users</li>
+              
+            </ul>
+          </div>
+          <div class="bg-light-gray p-2 rounded-10">
+            <h2>Manage Books</h2> 
+            <form id="bookform" onsubmit="">
+              <form action="" class="form">
+                <div>
+                  <label for="title">Title
+                    <input type="text" name="title">
+                  </label>
+                </div>
+                <div>
+                  <label for="author">Author</label>
+                  <input type="text" name="author">
+                </div>
+                <div>
+                  <label for="date_published">Date Published</label>
+                  <input type="date" name="date_published">
+                </div>
+                <div>
+                  <label for="publisher">Publisher</label>
+                  <input type="text" name="publisher">
+                </div>
+                <div>
+                  <label for="description">Description</label>
+                  <textarea name="description" id="" cols="30" rows="10"></textarea>
+
+                </div>
+
+                <button class="btn px-20 py-1 bg-blue text-white">Send </button>
+              </form>
+            </form>
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
+  <footer class="bg-red text-white">
+    <section class="content-wrap py-1">
+      <div class="flex space-between">
+          <div>
+            <img src="./images/header_logo.png" alt="" width="150">
+            <p>
+              Silent Library offers 
+            </p>
+          </div> 
+          <div id="footer-links" class="grid grid-cols-2 gap-20">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li><a href="./contact-us.html">Contact Us</a>
+              </li>
+              <li><a href="./booklist.html">Books</a>
+              </li>
+              <li><a href="./borrowers.html">Books</a>
+              </li>
+              <li><a href="./events.html">Events & Promotions</a>
+              </li>
+            </ul>
+            <ul>
+              <li><a href="./sitemap.html">Sitemap</a></li>
+              <li><a href="./privacy.html">Privacy</a></li>
+            </ul>
+          </div> 
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
