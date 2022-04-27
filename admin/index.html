@@ -5,9 +5,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Silent Library : Booklist</title>
-	<link rel="stylesheet" href="./css/styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 	<header class="">
@@ -50,54 +51,26 @@
   <main>
     <section class="bg-secondary">
       <div class="content-wrap">
-      <div class=" py-2 rounded-10 px-5 center">
-            
-          <div class="flex mb-20 py-1 gap-20 ">
-            <div class="px-3 pt-4">
-              </div>
-            <div class="px-3 pt-4">
-              <img src="./images/login-register.png" alt="" class="mt-2">
-            </div>
-            <div class="content p-5">
-              <h3>
-                Register
-              </h3>
+        <h1 class="text-black my-20">Admin Page</h1>
+        <div class="grid grid-sidebar gap-20 ">
+          <div class="bg-light-gray p-2 rounded-10">
+           
+            <h3>Menu</h3>
+            <ul id="genre-list">
+              <li>Books</li>
+              <li>Borrowers</li>
+              <li>Events</li>
+              <li>Enquiries</li>
+              <li>Users</li>
               
-              <form action="" class="form">
-                <div>
-                  <label for="email">Email
-                    <input type="email" name="email">
-                  </label>
-                </div>
-                <div>
-                  <label for="name">First Name
-                    <input type="text" name="first-name">
-                  </label>
-                </div>
-                <div>
-                  <label for="name">Last Name
-                    <input type="text" name="first-name">
-                  </label>
-                </div>
-                <div>
-                  <label for="password">Password</label>
-                  <input type="password" name="password">
-                </div>
-                
-                <div>
-                  <label for="password">Confirm Password</label>
-                  <input type="password" name="password-confirm">
-                </div>
-                
-                <button class="btn px-20 py-1 bg-blue text-white">Register </button>
-              </form>
-              <a href="./login.html" class="py-20 mt-10">Go back to Login</a>
-            </div>
+            </ul>
           </div>
-       
+          <div class="bg-light-gray p-2 rounded-10">
+            <h2>Manage Borrowers</h2> 
+  
+          </div>
+        </div>
       </div>
-    
-      
   </section>
   </main>
   <footer class="bg-red text-white">
@@ -115,7 +88,6 @@
                 <a href="/">Home</a>
               </li>
               <li><a href="./contact-us.html">Contact Us</a>
-
               </li>
               <li><a href="./booklist.html">Books</a>
               </li>
