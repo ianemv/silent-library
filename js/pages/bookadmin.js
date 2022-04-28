@@ -1,4 +1,20 @@
 import BookModel from "../models/bookmodel.js"
+import { formToObject } from "../utils/utils.js";
+import { createTable } from "../elements/table.js";
+
+const HEADINGS = [
+  'ID',
+  "Title",
+  "Author",
+  "Date Published",
+  "Action",
+];
+
+const columnFields = {
+  name: ''
+};
+
+
 
 function processBook(e){
 
@@ -6,12 +22,7 @@ function processBook(e){
 
   const bookModel = BookModel.getInstance();
 
-  const elements = e.target.elements;
-  let data = {};
-
-  for (var i = 0; i < elements.length; i++){
-    data[elements[i].name] = elements[i].value;
-  }
+  let data = formToObject(e.target);
   
   const book = {
     title: data.title,
@@ -22,8 +33,6 @@ function processBook(e){
 
   const result = bookModel.addNewBook(book);
 
-
-
   if (result){
     alert("Book saved!")
     e.target.reset();
@@ -33,10 +42,15 @@ function processBook(e){
 
 }
 
-function updatePage(){
-
+function renderTable(){
+  const bookModel = BookModel.getInstance();
+  const rows = bookModel.getAllBooks();
+  createTable("#booktable",HEADINGS,rows,true)
 }
 
-
-
-document.querySelector("#bookform").addEventListener("submit", processBook);
+if (document.querySelector("#bookform")){
+  document.querySelector("#bookform").addEventListener("submit", processBook);
+}
+if(document.querySelector("#booktable")){
+  window.addEventListener("load",renderTable)
+}

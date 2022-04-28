@@ -12,8 +12,7 @@ class BorrowersModel {
 
 		return this._instance;
 	}
-
-
+	
 	addNewBorrower(borrowerData){
 		//
 	}

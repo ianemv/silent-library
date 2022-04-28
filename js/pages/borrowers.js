@@ -5,5 +5,5 @@ function handleSubmitForm(e){
 document.querySelector("#submitbform").addEventListener("click",handleSubmitForm);
 
 document.querySelector("#title").addEventListener("click",function(){
-	alert("i was focus")
+	//alert("i was focus")
 })
