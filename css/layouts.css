@@ -49,6 +49,12 @@
 .grid-cols-4 {  
   grid-template-columns: repeat(4, 1fr)
 }
+.d-block {
+  display: block;
+}
+.w-50 {
+  width: 50%;
+}
 
 @media screen and (min-width:500px) and (max-width:1000px)
 {

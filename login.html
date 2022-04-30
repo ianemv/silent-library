@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+  <script src="./js/pages/login.js" type="module"></script>
 </head>
 <body>
 	<header class="">
@@ -63,11 +64,10 @@
                 Login now!
               </h3>
               
-              <form action="" class="form">
+              <form id="loginform" action="" class="form mb-20">
                 <div>
                   <label for="name">Email
                     <input type="text" name="name">
-
                   </label>
                 </div>
                 <div>
@@ -75,8 +75,9 @@
                   <input type="password" name="password">
                 </div>
                 
-                <button class="btn px-20 py-1 bg-blue text-white">Login </button>
+                <button class="btn px-20 py-1 bg-blue text-white d-block w-50 text-center">Login </button>
               </form>
+
               <a href="./register.html" class="py-20 mt-10">Don't have an account yet</a>
             </div>
           </div>
