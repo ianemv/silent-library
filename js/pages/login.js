@@ -4,7 +4,9 @@ import { formToObject } from "../utils/utils.js";
 function processLogin(e){
   e.preventDefault();
   
-  let users = JSON.parse(localStorage.getItem("users"));
+  let users = localStorage.getItem("users") === null ? null : 
+  users = JSON.parse(localStorage.getItem("users"));;
+
   
   if (users == null){
     const admin = {
