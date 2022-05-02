@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
+  <script src="./js/elements/gallery.js"></script>
 </head>
 <body>
 	<header class="">
@@ -53,21 +54,47 @@
       <div class="content-wrap">
         
         <div id="event-section" class="flex space-between p-5 flex-wrap">
-            <div id="event-item" class="p-2 py-3 bg-gray text-white rounded-10 flex flex-column space-between">
-              <div class="">
-                <h2>Holy Week Special Promo</h2>
-                <p>Holy Week special! In celebration of holy week, Silent Library
-                  offers 10% discount to books about religion.
-                 </p>
-               </div>
-               <div>
-                 <a href="" class="font-3 btn circle text-white no-ul">></a>
-               </div>
+          <div id="gallery-wrapper" class="flex">
+            <div id="gallery" class="flex">
+              <div class="slider-item" data-counter="0">
+                <div id="event-item" class="p-2 py-3 bg-gray text-white rounded-10 flex flex-column space-between">
+                  <div class="">
+                    <h2>Holy Week Special Promo</h2>
+                    <p>Holy Week special! In celebration of holy week, Silent Library
+                      offers 10% discount to books about religion.
+                    </p>
+                  </div>
+                  <div>
+                    <a href="" class="font-3 btn circle text-white no-ul">></a>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <img src="./images/events/holy-week.png" alt="">
+                </div>
+              </div>
+              <div class="slider-item" data-counter="1">
+                <div id="event-item" class="p-2 py-3 bg-gray text-white rounded-10 flex flex-column space-between">
+                  <div class="">
+                    <h2>Another Event</h2>
+                    <p>Holy Week special! In celebration of holy week, Silent Library
+                      offers 10% discount to books about religion.
+                    </p>
+                  </div>
+                  <div>
+                    <a href="" class="font-3 btn circle text-white no-ul">></a>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <img src="./images/events/holy-week.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="flex">
+              <button id="next-btn" class="arrow arrow-next">></button>
+              <button id="prev-btn" class="arrow arrow-prev"><</button>
 
             </div>
-            <div class="text-center">
-              <img src="./images/events/holy-week.png" alt="">
-            </div>
+          </div>
         </div>
       </div>
     </section>

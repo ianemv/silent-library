@@ -1,6 +1,6 @@
-export const createTable = (id, columns, rows, action) => {
+export const createTable = (id, columns, rows) => {
 	const headings = createTableHeading(columns);
-	const rowTable = createTableRows(rows, action);
+	const rowTable = createBookTableRows(rows, columns);
 	let table = "<table>";
 	table += headings;
 	table += rowTable;
@@ -14,27 +14,30 @@ const createTableHeading = (columns) => {
 	headings +="<th><tr>";
 	
 	columns.forEach(element => {
-		headings += "<td>"+element+"</td>";
+		headings += "<td>"+element.title+"</td>";
 	});
-	headings +="</tr></th>";
+  
+  headings += "<td>Action</td>"
+  headings +="</tr></th>";
 	return headings;
 }
-const createTableRows = (data, action = false) => {
+const createBookTableRows = (data, columns) => {
 	let rows = "";
 
 	data.forEach(row => {
 		rows += "<tr>";
-		const cols = Object.keys(row).forEach(a => {
-			rows += "<td>";
-			rows +=  row[a]
+
+    columns.forEach(c => {
+      rows += "<td>";
+      rows += row[c.name]
 			rows += "</td>";
-		})
-		if (action){
-			rows += "<td></td>"
-		}
+    })
+    rows += "<td>";
+    rows += "<a href=\"../books/editBook.html?id="+row.id+"\">Edit</a>";
+    rows += "<button class=\"delete-book mx-10\" data-action=\"books\" data-id=\""+row.id+"\">Delete</button>";
+    rows += "</td>";		
 		rows +="</tr>";
 	})
 
 	return rows;
-
 }

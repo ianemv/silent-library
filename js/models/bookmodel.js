@@ -57,7 +57,7 @@ class BookModel {
     // find the book by id
     
     let bookIndex = books.findIndex(a => a.id == data.id);
-    if (bookIndex){
+    if (bookIndex > -1){
       //books = [...books.filter(a=>a.id != data.id), data]
       books.splice(bookIndex,1,data)
     }
@@ -70,12 +70,9 @@ class BookModel {
   deleteBook(id){
     let books = JSON.parse(localStorage.getItem("books")) || [];
     // find the book by id
-    let bookIndex = books.findIndex(a => a.id == data.id);
-    if (bookIndex){
-      books.splice(bookIndex,1,data)
-    }
+    let filteredBooks = books.filter(a => a.id != id);
 
-    localStorage.setItem("books", JSON.stringify(books));
+    localStorage.setItem("books", JSON.stringify(filteredBooks));
     return true;
   }
 
