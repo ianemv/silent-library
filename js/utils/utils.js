@@ -5,6 +5,5 @@ export const formToObject = (form) => {
   for (var i = 0; i < elements.length; i++){
     data[elements[i].name] = elements[i].value;
   }
-
 	return data;
 }

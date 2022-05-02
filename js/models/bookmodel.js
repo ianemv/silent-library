@@ -11,6 +11,15 @@ class BookModel {
     return this._instance;
   }
 
+  getJsonData(){
+    const books = JSON.parse(localStorage.getItem("books"));
+
+    if (books != null){
+      return books;
+    }
+    return [];
+  }
+
   getAllBooks(){
     const books = JSON.parse(localStorage.getItem("books"));
 
@@ -21,8 +30,11 @@ class BookModel {
     return [];
   }
 
-  addMember(memberdata){
-    // i will update the localStorage
+  getBookById(id){
+    const books = this.getJsonData();
+    let book = null;
+    book = books.find(a => a.id === id);
+    return book;
   }
 
   addNewBook(book){
@@ -30,6 +42,7 @@ class BookModel {
     let books = JSON.parse(localStorage.getItem("books")) || [];
 
     //books = [...books, book];
+    book.id = "BK-"+this.generateId();
     books.push(book);
     // update the localStorage with key books
     // JSON.stringify () to convert JSON Object to string
@@ -38,17 +51,40 @@ class BookModel {
     return true;
   }
 
-  editBook(id, data){
+  editBook(data){
     // get the books from localStorage
     let books = JSON.parse(localStorage.getItem("books")) || [];
     // find the book by id
-    let bookToEdit = books.find(id);
-    bookToEdit = {...data};
+    
+    let bookIndex = books.findIndex(a => a.id == data.id);
+    if (bookIndex){
+      //books = [...books.filter(a=>a.id != data.id), data]
+      books.splice(bookIndex,1,data)
+    }
+    localStorage.setItem("books", JSON.stringify(books));
+    return true;
+
 
   }
 
   deleteBook(id){
+    let books = JSON.parse(localStorage.getItem("books")) || [];
+    // find the book by id
+    let bookIndex = books.findIndex(a => a.id == data.id);
+    if (bookIndex){
+      books.splice(bookIndex,1,data)
+    }
 
+    localStorage.setItem("books", JSON.stringify(books));
+    return true;
+  }
+
+  checkUnique(id){
+
+  }
+
+  generateId(){    
+    return Date.now();
   }
 
   message(){
