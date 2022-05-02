@@ -1,9 +1,12 @@
 
 import { formToObject } from "../utils/utils.js";
+import UserModel from "../models/usermodel"
 
 function processLogin(e){
   e.preventDefault();
   
+  const userModel = UserModel.getInstance();
+
   let users = localStorage.getItem("users") == null ? null : JSON.parse(localStorage.getItem("users"));
   users = JSON.parse(localStorage.getItem("users"));
 
@@ -18,6 +21,15 @@ function processLogin(e){
   }
   
   let data = formToObject(e.target);
+
+  if (!userModel.emailExists(data.email)){
+    users.push({
+      email: "admin@mail.com",
+      password: "default",
+      first_name: "Admin",
+      last_name: "Admin",
+    }) 
+  }
   
   const login = {
     password: data.password,

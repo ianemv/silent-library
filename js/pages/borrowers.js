@@ -82,3 +82,22 @@ if (document.querySelector("#editborrowerform")){
   // load data 
   window.addEventListener("load",loadDataToForm)
 }
+
+
+function deleteBorrower(e){
+  const bookId = e.target.dataset.id;
+  const resp = confirm("Are you sure want to delete borrower with id "+bookId+"?")
+  if (resp){
+    const model = User.getInstance();
+    model.deleteBorrower(bookId);
+    window.location.reload();
+  }
+}
+
+window.addEventListener("load", function(){
+  const allButtons = document.querySelectorAll(".delete-borrower")
+  
+  allButtons.forEach(e => {
+    e.addEventListener("click", deleteBorrower)
+  })
+})
