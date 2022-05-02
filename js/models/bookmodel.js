@@ -57,14 +57,11 @@ class BookModel {
     // find the book by id
     
     let bookIndex = books.findIndex(a => a.id == data.id);
-    if (bookIndex > -1){
-      //books = [...books.filter(a=>a.id != data.id), data]
+    if (bookIndex > -1){      
       books.splice(bookIndex,1,data)
     }
     localStorage.setItem("books", JSON.stringify(books));
     return true;
-
-
   }
 
   deleteBook(id){
@@ -76,11 +73,7 @@ class BookModel {
     return true;
   }
 
-  checkUnique(id){
-
-  }
-
-  generateId(){    
+   generateId(){    
     return Date.now();
   }
 

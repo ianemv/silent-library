@@ -59,43 +59,52 @@
             <h3>Menu</h3>
             <ul id="genre-list">
               <li>
-                <a href="./admin/books/index.html">
+                <a href="../books/index.html">
                   Books
                   </a>
               </li>
-              <li>Borrowers</li>
-              <li>Events</li>
-              <li>Enquiries</li>
-              <li>Users</li>
+              <li>
+                <a href="../borrowers/index.html">
+                  Borrowers
+                  </a>
+              </li>
+              <li>
+                <a href="../events/index.html">
+                  Events
+                  </a>
+              </li>
+              <li>
+                Enquiries
+              </li>
+              <li>
+                <a href="../users/index.html">
+                  Users
+                  </a>
+              </li>
               
             </ul>
           </div>
           <div class="bg-light-gray p-2 rounded-10">
             <h2>Manage Borrowers</h2> 
-            <form id="borrowerform" onsubmit="" class="form">
+            <form id="editborrowerform" onsubmit="" class="form">
               
-                <div>
-                  <label for="title">Title
-                    <input type="text" name="title" id="title">
-                  </label>
-                </div>
-                <div>
-                  <label for="author">Author</label>
-                  <input type="text" name="author">
-                </div>
-                <div>
-                  <label for="date_published">Date Published</label>
-                  <input type="date" name="date_published">
-                </div>
-                <div>
-                  <label for="publisher">Publisher</label>
-                  <input type="text" name="publisher">
-                </div>
-                <div>
-                  <label for="description">Description</label>
-                  <textarea name="description" id="" cols="30" rows="10"></textarea>
-
-                </div>
+              <div>
+                <label for="title">Email
+                  <input type="text" name="email" id="email">
+                </label>
+              </div>
+              <div>
+                <label for="first_name">First Name</label>
+                <input type="text" name="first_name">
+              </div>
+              <div>
+                <label for="last_name">Last Name</label>
+                <input type="text" name="last_name">
+              </div>
+              <div>
+                <label for="password">Password</label>
+                <input type="password" name="password">
+              </div>
 
                 <button id="submitbform" class="btn px-20 py-1 bg-blue text-white">Submit </button>
             </form>

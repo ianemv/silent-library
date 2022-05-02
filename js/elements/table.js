@@ -1,6 +1,21 @@
-export const createTable = (id, columns, rows) => {
+export const createTable = (id, columns, rows, page) => {
 	const headings = createTableHeading(columns);
-	const rowTable = createBookTableRows(rows, columns);
+	
+  let rowTable = createBookTableRows(rows, columns);
+  
+  switch(page){
+    case 'books':
+      rowTable = createBookTableRows(rows, columns);
+      break;
+    case 'borrowers':
+      rowTable = createBorrowersTableRows(rows, columns);
+      break;
+
+  }
+  
+
+
+
 	let table = "<table>";
 	table += headings;
 	table += rowTable;
@@ -33,8 +48,28 @@ const createBookTableRows = (data, columns) => {
 			rows += "</td>";
     })
     rows += "<td>";
-    rows += "<a href=\"../books/editBook.html?id="+row.id+"\">Edit</a>";
-    rows += "<button class=\"delete-book mx-10\" data-action=\"books\" data-id=\""+row.id+"\">Delete</button>";
+    rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../books/editBook.html?id="+row.id+"\">Edit</a>";
+    rows += "<button class=\"delete-book my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"books\" data-id=\""+row.id+"\">Delete</button>";
+    rows += "</td>";		
+		rows +="</tr>";
+	})
+
+	return rows;
+}
+const createBorrowersTableRows = (data, columns) => {
+	let rows = "";
+
+	data.forEach(row => {
+		rows += "<tr>";
+
+    columns.forEach(c => {
+      rows += "<td>";
+      rows += row[c.name]
+			rows += "</td>";
+    })
+    rows += "<td>";
+    rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../borrowers/edit.html?id="+row.id+"\">Edit</a>";
+    rows += "<button class=\"delete-borrower my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"borrowers\" data-id=\""+row.id+"\">Delete</button>";
     rows += "</td>";		
 		rows +="</tr>";
 	})

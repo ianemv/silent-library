@@ -106,9 +106,24 @@
                   <input type="text" name="publisher">
                 </div>
                 <div>
+                  <label for="image">Image</label>
+                  <input type="text" name="image" placeholder="http://www.flicker.com/iage.jpg">
+                </div>
+                <div>
+                  <label for="image">Genre</label>
+                  <select name="genre" id="genre">
+                    <option value="fiction">Fiction</option>
+                    <option value="politics">Politics</option>
+                    <option value="religion">Religion</option>
+                    <option value="novel">Novel</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="children">Children</option>
+                    <option value="mystery">Mystery</option>
+                  </select>
+                </div>                
+                <div>
                   <label for="description">Description</label>
                   <textarea name="description" id="" cols="30" rows="10"></textarea>
-
                 </div>
 
                 <button class="btn px-20 py-1 bg-blue text-white">Submit </button>

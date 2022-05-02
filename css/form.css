@@ -1,0 +1,19 @@
+
+
+.form input, .form textarea, .form select {
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--gray);
+  padding: 10px 20px;
+}
+.form input{
+  min-width: 250px;
+}
+.form textarea{
+  min-width: 350px;
+}
+
+.form select {
+
+}

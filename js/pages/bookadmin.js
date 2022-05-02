@@ -25,6 +25,8 @@ function processBook(e){
     author: data.author,
     date_published: data.date_published,
     publisher: data.publisher,
+    genre: data.genre,
+    image: data.image || "",
     id: data.id || null
   };
 
@@ -49,7 +51,7 @@ function processBook(e){
 function renderTable(){
   const bookModel = BookModel.getInstance();
   const rows = bookModel.getAllBooks();
-  createTable("#booktable",COLUMNS,rows)
+  createTable("#booktable",COLUMNS,rows, "books")
 }
 
 function deleteBook(e){

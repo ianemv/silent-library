@@ -5,6 +5,8 @@
 @import url('./fonts.css');
 @import url('./colors.css');
 @import url('./gallery.css');
+@import url('./form.css');
+@import url('./mouse.css');
 
 /* body, main {
   height: 100vh;
@@ -148,20 +150,6 @@ EVENTS
   margin: 20px 0;
 }
 
-
-.form input, .form textarea {
-  display: block;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid var(--gray);
-  padding: 10px 20px;
-}
-.form input{
-  min-width: 250px;
-}
-.form textarea{
-  min-width: 350px;
-}
 
 
 table {
