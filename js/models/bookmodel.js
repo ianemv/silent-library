@@ -33,7 +33,7 @@ class BookModel {
   getBookById(id){
     const books = this.getJsonData();
     let book = null;
-    book = books.find(a => a.id === id);
+    book = books.find(a => a.id == id);
     return book;
   }
 

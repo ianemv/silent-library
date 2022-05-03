@@ -3,7 +3,7 @@ export class EventModel {
     this._instance = null;
   }
 
-  getInstannce(){
+  static getInstance(){
 
     if (this._instance == null){
       this._instance = new EventModel();
@@ -12,23 +12,42 @@ export class EventModel {
     
   }
 
-  getAllEvents(){
+  getJsonData(){
+    const users = JSON.parse(localStorage.getItem("events"));
+
+    if (users != null){
+      return users;
+    }
+    return [];
+  }
+
+  getAll(){
     const events = JSON.parse(localStorage.getItem("events"));
     if (events != null){
       return events;
     }
+
+    return []
   }
 
-  addEvent(event){
-    let events = JSON.parse(localStorage.getItem("events"));
+  getById(id){
+    const users = this.getJsonData();
+    let user = null;
+    user = users.find(a => a.id == id);
+    return user;
+  }
+
+  addRec(event){
+    let events = JSON.parse(localStorage.getItem("events")) || [];
+    event.id = this.generateId();
     events = [...events, event];
     localStorage.setItem("events", JSON.stringify(events));
+    return true;
   }
 
-  editEvent(data){
-    
+  editRec(data){
     let rows = JSON.parse(localStorage.getItem("events")) || [];
-    let index = events.findIndex(a => a.id == data.id);
+    let index = rows.findIndex(a => a.id == data.id);
     if (index > -1){      
       rows.splice(index,1,data)
       localStorage.setItem("events", JSON.stringify(rows));
@@ -37,15 +56,20 @@ export class EventModel {
     return false;
   }
 
-  deleteUser(id){
-    let rows = JSON.parse(localStorage.getItem("users")) || [];
-    let filtered = users.filter(a => a.id != id);
+  deleteRec(id){
+    let rows = JSON.parse(localStorage.getItem("events")) || [];
+    let filtered = rows.filter(a => a.id != id);
     localStorage.setItem("events", JSON.stringify(filtered));
     return true;
   }
 
   generateId(){    
-    return "UID"+Date.now();
+    return "EVT-"+Date.now();
   }
 
 }
+
+
+EventModel._instance = null;
+
+export default EventModel;

@@ -10,6 +10,9 @@ export const createTable = (id, columns, rows, page) => {
     case 'borrowers':
       rowTable = createBorrowersTableRows(rows, columns);
       break;
+    case 'events':
+      rowTable = createEventsTableRows(rows, columns);
+      break;
 
   }
   
@@ -70,6 +73,27 @@ const createBorrowersTableRows = (data, columns) => {
     rows += "<td>";
     rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../borrowers/edit.html?id="+row.id+"\">Edit</a>";
     rows += "<button class=\"delete-borrower my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"borrowers\" data-id=\""+row.id+"\">Delete</button>";
+    rows += "</td>";		
+		rows +="</tr>";
+	})
+
+	return rows;
+}
+
+const createEventsTableRows = (data, columns) => {
+	let rows = "";
+
+	data.forEach(row => {
+		rows += "<tr>";
+
+    columns.forEach(c => {
+      rows += "<td>";
+      rows += row[c.name]
+			rows += "</td>";
+    })
+    rows += "<td>";
+    rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../events/edit.html?id="+row.id+"\">Edit</a>";
+    rows += "<button class=\"delete-event my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"events\" data-id=\""+row.id+"\">Delete</button>";
     rows += "</td>";		
 		rows +="</tr>";
 	})

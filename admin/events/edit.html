@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Silent Library : Booklist</title>
-	<link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
-<script src="./js/fe/events.js" type="module" defer></script>
+	<link rel="stylesheet" href="../../css/styles.css">
+  <script src="../../js/pages/eventsadmin.js" type="module"></script>
 </head>
 <body>
 	<header class="">
@@ -17,7 +17,7 @@
       <div class="flex space-between">
           <h1>
               <a href="/">
-              <img src="./images/header_logo.png" alt="" width="250">
+              <img src="../../images/header_logo.png" alt="" width="250">
               </a>
           </h1>	
           <nav class="flex py-10">
@@ -31,13 +31,13 @@
               </a>
             </li>
             <li>
-              <a href="/events.html">
-                Events
+              <a href="/borrowers.html">
+                Borrowers
               </a>
             </li>
             <li>
-              <a href="/borrowers.html">
-                Borrowers
+              <a href="/events.html">
+                Events
               </a>
             </li>
             <li class=" btn text-white bg-blue"> 
@@ -50,49 +50,66 @@
 	</header>
 
   <main>
-    <section class="events bg-secondary ">
+    <section class="bg-secondary">
       <div class="content-wrap">
-        <h1 class="text-black my-20">Events & Promotions</h1>
-        
-
-        <div class=" py-2 rounded-10" id="events">
-
-            <div class="flex border-bottom-dashed-washed mb-20 py-1">
-              <div class="mr-2">
-                <img class="event-cover" src="./images/events/book-signing-2.jpg" alt="" >
-        
+        <h1 class="text-black my-20">Admin Page</h1>
+        <div class="grid grid-sidebar gap-20 ">
+          <div class="bg-light-gray p-2 rounded-10">
+           
+            <h3>Menu</h3>
+            <ul id="genre-list">
+              <li>
+                <a href="../books/index.html">
+                  Books
+                  </a>
+              </li>
+              <li>
+                <a href="../borrowers/index.html">
+                  Borrowers
+                  </a>
+              </li>
+              <li>
+                <a href="../events/index.html">
+                  Events
+                  </a>
+              </li>
+              <li>
+                Enquiries
+              </li>
+              <li>
+                <a href="../users/index.html">
+                  Users
+                  </a>
+              </li>
+              
+            </ul>
+          </div>
+          <div class="bg-light-gray p-2 rounded-10">
+            <h2>Manage Events & Promotions</h2> 
+            <form id="editeventform" onsubmit="" class="form">
+              <input type="hidden" name="id" >
+              <div>
+                <label for="title">Event & Promotion
+                  <input type="text" name="title" >
+                </label>
               </div>
               <div>
-                <h4><a href="./event-book-signing.html">Book Signing by J.D. Salinger</a></h4>
-                <p>June 30, 2022</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-              </div>
-            </div>
-            <div class="flex border-bottom-dashed-washed mb-20 py-1">
-              <div class="mr-2">
-                <img class="event-cover" src="./images/events/book-signing.jpg" alt="" >
-        
+                <label for="date">Date</label>
+                <input type="date" name="date">
               </div>
               <div>
-                <h4><a href="./event-book-signing.html">Alamy in Silent Library</a></h4>
-                <p>July 2022</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-              </div>
-            </div>
-            <div class="flex border-bottom-dashed-washed mb-20 py-1">
-              <div class="mr-2">
-                <img class="event-cover" src="./images/events/book-signing-2.jpg" alt="" >
-        
+                <label for="date">Image</label>
+                <input type="text" name="image" placeholder="https://wwww.images.com/holder.jpg">
               </div>
               <div>
-                <h4><a href="./event-book-signing.html">Book Launching</a></h4>
-                <p>May 22, 2022</p>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <label for="description">Description</label>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
               </div>
-            </div>
-         
+                <button id="submitbform" class="btn px-20 py-1 bg-blue text-white">Submit </button>
+            </form>
+          </div>
         </div>
-      
+      </div>
   </section>
   </main>
   <footer class="bg-red text-white">
@@ -110,7 +127,6 @@
                 <a href="/">Home</a>
               </li>
               <li><a href="./contact-us.html">Contact Us</a>
-
               </li>
               <li><a href="./booklist.html">Books</a>
               </li>
