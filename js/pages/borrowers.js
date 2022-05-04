@@ -1,6 +1,28 @@
 import UserModel from "../models/usermodel.js"
 import { formToObject, checkAuth } from "../utils/utils.js";
 import { createTable } from "../elements/table.js";
+import { showError } from "../utils/validation.js";
+
+const validationConstraint = {
+  email: {
+    email: true
+  },
+  first_name: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  last_name: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  password: {
+    presence: true,
+    length: {minimum: 8}
+  },
+  ["password-confirm"]: {
+    equality: "password"
+  }
+}
 
 const COLUMNS = [
   {name: 'id', title: "ID"},
@@ -25,6 +47,26 @@ function processForm(e){
     id: data.id || null
   };
 
+
+  const validateResult = validate(newUser, validationConstraint)
+
+  let hasError = false;
+
+  Object.keys(validateResult).forEach(key => {
+    if (validateResult[key].length > 0){
+      hasError = true
+    }
+  })
+
+  if (hasError){
+    if (cto.id){
+      showError("#editborrowerform", validateResult)
+    }else{
+      showError("#borrowerform", validateResult)
+    }
+    return;
+  }
+
   let result = null
 
   if (cto.id){
@@ -33,7 +75,6 @@ function processForm(e){
     result = model.addNewBook(cto);
   }
 
-
   if (result){    
     window.location.replace("./")    
   }else{
@@ -41,8 +82,6 @@ function processForm(e){
   }
 
 }
-
-
 
 function renderTable(){
   const userModel = UserModel.getInstance();

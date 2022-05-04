@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/styles.css">
   <script src="../../js/pages/borrowers.js" type="module"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
 </head>
 <body>
 	<header class="">
@@ -90,18 +91,25 @@
                 <label for="title">Email
                   <input type="text" name="email" id="email">
                 </label>
+                <div class="error hide" data-field="email"></div>
+          
               </div>
               <div>
                 <label for="first_name">First Name</label>
                 <input type="text" name="first_name">
+                <div class="error hide" data-field="first_name"></div>
+          
               </div>
               <div>
                 <label for="last_name">Last Name</label>
                 <input type="text" name="last_name">
+                <div class="error hide" data-field="last_name"></div>
+          
               </div>
               <div>
                 <label for="password">Password</label>
                 <input type="password" name="password">
+                <div class="error hide" data-field="password"></div>
               </div>
 
                 <button id="submitbform" class="btn px-20 py-1 bg-blue text-white">Submit </button>

@@ -1,14 +1,35 @@
 import EventModel from "../models/events.js"
 import { formToObject, checkAuth } from "../utils/utils.js";
 import { createTable } from "../elements/table.js";
+import { showError } from "../utils/validation.js";
 
 const COLUMNS = [
   {name: 'id', title: "ID"},
   {name: 'title', title: "Title"},
   {name: 'description', title: "Description"},
   {name: 'date', title: "Date"}
- 
 ]
+
+const validationConstraint = {
+
+  title: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  image: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  date: {
+    presence: true,
+    length: {minimum: 8}
+  },
+  description: {
+    presence: true,
+    length: {minimum: 8}
+  }
+  
+}
 
 function processForm(e){
 
@@ -18,7 +39,7 @@ function processForm(e){
 
   let data = formToObject(e.target);
   
-  let book = {
+  let cto = {
     title: data.title,
     description: data.description,
     date: data.date,    
@@ -26,12 +47,31 @@ function processForm(e){
     id: data.id || null
   };
 
+  const validateResult = validate(cto, validationConstraint)
+
+  let hasError = false;
+
+  Object.keys(validateResult).forEach(key => {
+    if (validateResult[key].length > 0){
+      hasError = true
+    }
+  })
+
+  if (hasError){
+    if (cto.id){
+      showError("#editeventform", validateResult)
+    }else{
+      showError("#eventform", validateResult)
+    }
+    return;
+  }
+
   let result = null
 
-  if (book.id){
-    result = model.editRec(book);
+  if (cto.id){
+    result = model.editRec(cto);
   }else{
-    result = model.addRec(book);
+    result = model.addRec(cto);
   }
 
 

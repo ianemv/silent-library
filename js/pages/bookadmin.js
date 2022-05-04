@@ -1,6 +1,7 @@
 import BookModel from "../models/bookmodel.js"
 import { formToObject, checkAuth } from "../utils/utils.js";
 import { createTable } from "../elements/table.js";
+import { showError } from "../utils/validation.js";
 
 const COLUMNS = [
   {name: 'id', title: "ID"},
@@ -11,6 +12,34 @@ const COLUMNS = [
   {name: 'publisher', title: "Publiser"},
 ]
 
+const validationConstraint = {
+
+  title: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  author: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  date_published: {
+    presence: true,
+    length: {minimum: 8}
+  },
+  publisher: {
+    presence: true,
+    length: {minimum: 3}
+  },
+  image: {
+    presence: true,
+    length: {minimum: 10}
+  },
+  description: {
+    presence: true,
+    length: {minimum: 10}
+  },
+
+}
 
 function processBook(e){
 
@@ -29,6 +58,26 @@ function processBook(e){
     image: data.image || "",
     id: data.id || null
   };
+
+  const validateResult = validate(book, validationConstraint)
+
+  let hasError = false;
+
+  Object.keys(validateResult).forEach(key => {
+    if (validateResult[key].length > 0){
+      hasError = true
+    }
+  })
+
+  
+  if (hasError){
+    if (book.id){
+      showError("#editbookform", validateResult)
+    }else{
+      showError("#bookform", validateResult)
+    }
+    return;
+  }
 
   let result = null
 
@@ -71,7 +120,6 @@ if (document.querySelector("#bookform")){
 if(document.querySelector("#booktable")){
   window.addEventListener("load",renderTable)
 }
-
 
 // edit form
 if (document.querySelector("#editbookform")){

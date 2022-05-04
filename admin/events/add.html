@@ -10,6 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/styles.css">
   <script src="../../js/pages/eventsadmin.js" type="module"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
+  
 </head>
 <body>
 	<header class="">
@@ -90,20 +92,24 @@
                 <label for="title">Event & Promotion
                   <input type="text" name="title" >
                 </label>
+                <div class="error hide" data-field="title"></div>
               </div>
               <div>
                 <label for="date">Date</label>
                 <input type="date" name="date">
+                <div class="error hide" data-field="date"></div>
               </div>
               
               <div>
-                <label for="date">Image</label>
+                <label for="image">Image</label>
                 <input type="text" name="image" placeholder="https://wwww.images.com/holder.jpg">
+                <div class="error hide" data-field="image"></div>
               </div>
               
               <div>
                 <label for="description">Description</label>
                 <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <div class="error hide" data-field="description"></div>
               </div>
                 <button id="submitbform" class="btn px-20 py-1 bg-blue text-white">Submit </button>
             </form>

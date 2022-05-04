@@ -10,6 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/styles.css">
   <script src="../../js/pages/bookadmin.js" type="module"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
 </head>
 <body>
 	<header class="">
@@ -84,43 +85,54 @@
             <h2>Manage Books</h2> 
             <form id="editbookform" onsubmit="" class="form">
               <input type="hidden" name="id">
-                <div>
-                  <label for="title">Title
-                    <input type="text" name="title">
-                  </label>
-                </div>
-                <div>
-                  <label for="author">Author</label>
-                  <input type="text" name="author">
-                </div>
-                <div>
-                  <label for="date_published">Date Published</label>
-                  <input type="date" name="date_published">
-                </div>
-                <div>
-                  <label for="publisher">Publisher</label>
-                  <input type="text" name="publisher">
-                </div>
-                <div>
-                  <label for="image">Image</label>
-                  <input type="text" name="image" placeholder="http://www.flicker.com/iage.jpg">
-                </div>
-                <div>
-                  <label for="image">Genre</label>
-                  <select name="genre" id="genre">
-                    <option value="fiction">Fiction</option>
-                    <option value="politics">Politics</option>
-                    <option value="religion">Religion</option>
-                    <option value="novel">Novel</option>
-                    <option value="non-fiction">Non-Fiction</option>
-                    <option value="children">Children</option>
-                    <option value="mystery">Mystery</option>
-                  </select>
-                </div>                
-                <div>
-                  <label for="description">Description</label>
-                  <textarea name="description" id="" cols="30" rows="10"></textarea>
-                </div>
+              <div>
+                <label for="title">Title
+                  <input type="text" name="title">
+                </label>
+                <div class="error hide" data-field="title"></div>
+        
+              </div>
+              <div>
+                <label for="author">Author</label>
+                <input type="text" name="author" required>
+                <div class="error hide" data-field="author"></div>
+        
+              </div>
+              <div>
+                <label for="date_published">Date Published</label>
+                <input type="date" name="date_published">
+                <div class="error hide" data-field="date_published"></div>
+        
+              </div>
+              <div>
+                <label for="publisher">Publisher</label>
+                <input type="text" name="publisher">
+                <div class="error hide" data-field="publisher"></div>
+        
+              </div>
+              <div>
+                <label for="image">Image</label>
+                <input type="text" name="image" placeholder="http://www.flicker.com/iage.jpg">
+              </div>
+              <div>
+                <label for="image">Genre</label>
+                <select name="genre" id="genre">
+                  <option value="fiction">Fiction</option>
+                  <option value="politics">Politics</option>
+                  <option value="religion">Religion</option>
+                  <option value="novel">Novel</option>
+                  <option value="non-fiction">Non-Fiction</option>
+                  <option value="children">Children</option>
+                  <option value="mystery">Mystery</option>
+                </select>
+              </div>
+              <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="" cols="30" rows="10"></textarea>
+                <div class="error hide" data-field="description"></div>
+        
+              </div>
+
 
                 <button class="btn px-20 py-1 bg-blue text-white">Submit </button>
             </form>

@@ -9,6 +9,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="../../css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js" defer></script>
+ 
   <script src="../../js/pages/bookadmin.js" type="module"></script>
 </head>
 <body>
@@ -89,18 +91,26 @@
                   <label for="title">Title
                     <input type="text" name="title">
                   </label>
+                  <div class="error hide" data-field="title"></div>
+          
                 </div>
                 <div>
                   <label for="author">Author</label>
-                  <input type="text" name="author">
+                  <input type="text" name="author" required>
+                  <div class="error hide" data-field="author"></div>
+          
                 </div>
                 <div>
                   <label for="date_published">Date Published</label>
                   <input type="date" name="date_published">
+                  <div class="error hide" data-field="date_published"></div>
+          
                 </div>
                 <div>
                   <label for="publisher">Publisher</label>
                   <input type="text" name="publisher">
+                  <div class="error hide" data-field="publisher"></div>
+          
                 </div>
                 <div>
                   <label for="image">Image</label>
@@ -121,6 +131,8 @@
                 <div>
                   <label for="description">Description</label>
                   <textarea name="description" id="" cols="30" rows="10"></textarea>
+                  <div class="error hide" data-field="description"></div>
+          
                 </div>
 
                 <button class="btn px-20 py-1 bg-blue text-white">Submit </button>
