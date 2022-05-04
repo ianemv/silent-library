@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Silent Library : Booklist</title>
+	<link rel="stylesheet" href="./css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../../css/styles.css">
-  <script src="../../js/pages/eventsadmin.js" type="module" defer></script>
+<script src="./js/fe/events.js" type="module" defer></script>
 </head>
 <body>
 	<header class="">
@@ -26,17 +26,17 @@
               <a href="/">Home</a>	
             </li>
             <li>
-              <a href="/booklist.html">
+              <a href="./booklist.html">
                 Books
               </a>
             </li>
             <li>
-              <a href="/borrowers.html">
+              <a href="./borrowers.html">
                 Borrowers
               </a>
             </li>
             <li>
-              <a href="/events.html">
+              <a href="./events.html">
                 Events
               </a>
             </li>
@@ -52,46 +52,34 @@
   <main>
     <section class="bg-secondary">
       <div class="content-wrap">
-        <h1 class="text-black my-20">Admin Page</h1>
-        <div class="grid grid-sidebar gap-20 ">
-          <div class="bg-light-gray p-2 rounded-10">
-           
-            <h3>Menu</h3>
-            <ul id="genre-list">
-              <li>
-                <a href="../books/index.html">
-                  Books
-                  </a>
-              </li>
-              <li>
-                <a href="../borrowers/index.html">
-                  Borrowers
-                  </a>
-              </li>
-              <li>
-                <a href="../events/index.html">
-                  Events
-                  </a>
-              </li>
-              <li>
-                <a href="../inquiries/index.html">
-                  Enquiries
-                  </a>
-              </li>
-              
-            </ul>
-          </div>
-          <div class="bg-light-gray p-2 rounded-10">
-            <div class="flex space-between">
-              <h2>Manage Events</h2>
-              <a class="btn text-white bg-blue p-10" href="./add.html">Add Event</a>
+        <h1 class="text-black my-20">Events & Promotions</h1>
+        
+
+        <div class=" py-2 rounded-10" id="event-content">
+         
+        </div>
+        <div>
+          <h3>Enquire about this event</h3>   
+          <form action="" class="form" id="event-inquiry">
+            <div>
+              <label for="name">Name
+                <input type="text" name="name">
+
+              </label>
             </div>
-            <div id="eventstable">
+            <div>
+              <label for="email">Email</label>
+              <input type="email" name="email">
+            </div>
+            <div>
+              <label for="message">Message</label>
+              <textarea name="message" id="" cols="30" rows="10"></textarea>
 
             </div>
-          </div>
+
+            <button class="btn px-20 py-1 bg-blue text-white">Send </button>
+          </form>
         </div>
-      </div>
   </section>
   </main>
   <footer class="bg-red text-white">
@@ -109,10 +97,7 @@
                 <a href="/">Home</a>
               </li>
               <li><a href="./contact-us.html">Contact Us</a>
-              </li>
-              <li><a href="./booklist.html">Books</a>
-              </li>
-              <li><a href="./borrowers.html">Books</a>
+
               </li>
               <li><a href="./events.html">Events & Promotions</a>
               </li>

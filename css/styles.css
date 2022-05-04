@@ -150,7 +150,9 @@ EVENTS
   margin: 20px 0;
 }
 
-
+.event-detail-cover {
+  max-height: 250px;
+}
 
 table {
   width: 100%;

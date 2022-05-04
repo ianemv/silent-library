@@ -1,6 +1,6 @@
 
 import { formToObject } from "../utils/utils.js";
-import UserModel from "../models/usermodel"
+import UserModel from "../models/usermodel.js"
 
 function processLogin(e){
   e.preventDefault();

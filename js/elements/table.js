@@ -1,5 +1,5 @@
 export const createTable = (id, columns, rows, page) => {
-	const headings = createTableHeading(columns);
+	let headings = createTableHeading(columns);
 	
   let rowTable = createBookTableRows(rows, columns);
   
@@ -12,6 +12,11 @@ export const createTable = (id, columns, rows, page) => {
       break;
     case 'events':
       rowTable = createEventsTableRows(rows, columns);
+      break;
+    case 'inquiries':
+      headings = createTableHeading(columns,false);
+	
+      rowTable = createInquiriesTableRows(rows, columns);
       break;
 
   }
@@ -26,7 +31,7 @@ export const createTable = (id, columns, rows, page) => {
   document.querySelector(id).innerHTML = table;
 }
 
-const createTableHeading = (columns) => {
+const createTableHeading = (columns, action = true) => {
 	
 	let headings = '';
 	headings +="<th><tr>";
@@ -34,9 +39,11 @@ const createTableHeading = (columns) => {
 	columns.forEach(element => {
 		headings += "<td>"+element.title+"</td>";
 	});
-  
-  headings += "<td>Action</td>"
-  headings +="</tr></th>";
+  if (action){
+    headings += "<td>Action</td>"
+    headings +="</tr></th>";
+
+  }
 	return headings;
 }
 const createBookTableRows = (data, columns) => {
@@ -95,6 +102,26 @@ const createEventsTableRows = (data, columns) => {
     rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../events/edit.html?id="+row.id+"\">Edit</a>";
     rows += "<button class=\"delete-event my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"events\" data-id=\""+row.id+"\">Delete</button>";
     rows += "</td>";		
+		rows +="</tr>";
+	})
+
+	return rows;
+}
+const createInquiriesTableRows = (data, columns) => {
+	let rows = "";
+
+	data.forEach(row => {
+		rows += "<tr>";
+
+    columns.forEach(c => {
+      rows += "<td>";
+      rows += row[c.name]
+			rows += "</td>";
+    })
+   /*  rows += "<td>";
+    rows += "<a class='btn text-white bg-blue p-10 mx-10 d-block' href=\"../events/edit.html?id="+row.id+"\">Edit</a>";
+    rows += "<button class=\"delete-event my-10 btn text-white bg-blue p-10 d-block w-100 cursor-pointer\" data-action=\"events\" data-id=\""+row.id+"\">Delete</button>";
+    rows += "</td>";		 */
 		rows +="</tr>";
 	})
 
