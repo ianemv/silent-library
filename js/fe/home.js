@@ -1,50 +1,63 @@
-async function loadInitialUsers(){
-  
-  let users = localStorage.getItem("users") == null ? null : JSON.parse(localStorage.getItem("users"));
-  users = JSON.parse(localStorage.getItem("users"));
-  if (users == null) {
+import BookModel from "../models/bookmodel.js";
+import EventModel from "../models/events.js";
 
-    const resp = await fetch("./mockdata/users.json", {
+const bookModel = BookModel.getInstance();
+const eventModel = EventModel.getInstance();
+
+async function loadInitialData(key){  
+  let users = localStorage.getItem(key) == null ? null : JSON.parse(localStorage.getItem(key));
+  users = JSON.parse(localStorage.getItem(key));
+  if (users == null) {
+    const resp = await fetch(`./mockdata/${key}.json`, {
       credentials: 'same-origin'
     })
-    
     const result = await resp.json();    
-    localStorage.setItem("users", JSON.stringify(result));
-    
+    localStorage.setItem(key, JSON.stringify(result));
   }
 }
 
-async function loadInitialBooks(){
-  let users = localStorage.getItem("books") == null ? null : JSON.parse(localStorage.getItem("books"));
-  users = JSON.parse(localStorage.getItem("books"));
-  if (users == null) {
+function displayBooks(){
+  const bookContainer = document.querySelector("#books-homepage");
+  const books = bookModel.getAllBooks();
 
-    const resp = await fetch("./mockdata/books.json", {
-      credentials: 'same-origin'
-    })
-    
-    const result = await resp.json();    
-    localStorage.setItem("books", JSON.stringify(result));
-    
+  let elem = '';
+
+  if(books.length > 0) {
+    for(var i=0; i < 4; i++){
+      elem += `<div>
+        <img class="book-cover" src="${books[i].image}" alt="${books[i].title}" width="150">
+        <p>${books[i].title}</p>
+        <p>${books[i].author}</p>
+      </div>`;
+    }
   }
+  bookContainer.innerHTML = elem;
 }
-async function loadInitialEvents(){
-  let users = localStorage.getItem("events") == null ? null : JSON.parse(localStorage.getItem("events"));
-  users = JSON.parse(localStorage.getItem("events"));
-  if (users == null) {
 
-    const resp = await fetch("./mockdata/events.json", {
-      credentials: 'same-origin'
-    })
-    
-    const result = await resp.json();    
-    localStorage.setItem("events", JSON.stringify(result));
-    
+function displayEvents(){
+  const eventsContainer = document.querySelector("#events-promotion");
+  const events = eventModel.getAll();
+
+  let elem = '';
+
+  if(events.length > 0) {
+    for(var i=0; i < 3; i++){
+      if (events[i]) {
+        elem += `<div><a href="./event-details.html?id=${events[i].id}">
+        <img class="event-cover" src="${events[i].image}" alt="${events[i].title}" width="150"></a>
+        <p>${events[i].title}</p>
+        <p>${events[i].date}</p>
+        </div>`;
+      }
+    }
   }
+  eventsContainer.innerHTML = elem;
 }
 
 window.addEventListener("load",function(){
-  loadInitialUsers()
-  loadInitialBooks()
-  loadInitialEvents()
-})
+  loadInitialData("users");
+  loadInitialData("books");
+  loadInitialData("events");
+  displayBooks();
+  displayEvents();
+});

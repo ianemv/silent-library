@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Source+Sans+Pro:ital,wght@0,200;0,300;1,200&display=swap" rel="stylesheet">
   <script src="./js/elements/gallery.js"></script>
-  <script src="./js/fe/home.js"></script>
+  <script src="./js/fe/home.js" type="module"></script>
 </head>
 <body>
 	<header class="">
@@ -107,27 +107,8 @@
     <section class="bg-blue">
       <div class="content-wrap">
         <h2 class="text-center text-white">New & Popular Books</h2>        
-        <div class="grid grid-cols-4 p-3 text-white text-center">
-            <div>
-                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
-                <p>To Kill a Mockingbird</p>
-                <p>Harper Lee</p>
-            </div>    
-            <div>
-                <img class="book-cover" src="./images/books/The_Catcher_in_the_Rye.jpg" alt="" width="150">
-                <p>The Catcher in the Rye</p>
-                <p>J.D. Salinger</p>
-            </div>    
-            <div>
-                <img class="book-cover" src="./images/books/to_kill_a_mocking_bird.jpg" alt="" width="150">
-                <p>To Kill a Mockingbird</p>
-                <p>Harper Lee</p>
-            </div>    
-            <div>
-                <img class="book-cover" src="./images/books/the_midnight_library.jpg" alt="" width="150">
-                <p>The Midnight Library</p>
-                <p>Matt Haig</p>
-            </div>    
+        <div class="grid grid-cols-4 p-3 text-white text-center" id="books-homepage">
+          
         </div>
       </div>
     </section>

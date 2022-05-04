@@ -1,5 +1,6 @@
 import { createTable } from "../elements/table.js";
 import InquiryModel from "../models/inquiry.js";
+import { checkAuth } from "../utils/utils.js";
 
 const COLUMNS = [
   {name: 'id', title: "ID"},
@@ -20,3 +21,5 @@ function renderTable () {
 if (document.querySelector("#inquiriestable")){
   renderTable()
 }
+
+checkAuth()

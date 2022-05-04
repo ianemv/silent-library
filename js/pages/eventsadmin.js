@@ -1,5 +1,5 @@
 import EventModel from "../models/events.js"
-import { formToObject } from "../utils/utils.js";
+import { formToObject, checkAuth } from "../utils/utils.js";
 import { createTable } from "../elements/table.js";
 
 const COLUMNS = [
@@ -106,4 +106,6 @@ window.addEventListener("load", function(){
   allButtons.forEach(e => {
     e.addEventListener("click", deleteEvent)
   })
+
+  checkAuth()
 })

@@ -7,3 +7,25 @@ export const formToObject = (form) => {
   }
 	return data;
 }
+
+export const isLoggedIn = () =>{
+  const isLoggedIn = localStorage.getItem('isLoggedIn');
+  return isLoggedIn
+}
+
+export const checkAuth = () => {
+  const btn = document.querySelector("#login-btn");
+  
+  if (isLoggedIn()){
+    btn.innerHTML = "Logout"
+  }
+
+  btn.addEventListener("click", (e)=>{
+    
+    if (isLoggedIn()){
+      e.preventDefault()
+      localStorage.removeItem("isLoggedIn");
+      window.location.replace("../../")
+    }
+  })
+}
